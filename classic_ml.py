@@ -20,7 +20,14 @@ stop_words = set(stopwords.words('english'))
 # -----------------------------
 # Dataset IMDb từ Kaggle (csv)
 # Cột: review, sentiment
-data = pd.read_csv("IMDB Dataset.csv")
+df1 = pd.read_csv("IMDB_part1.csv")
+df2 = pd.read_csv("IMDB_part2.csv")
+df3 = pd.read_csv("IMDB_part3.csv")
+
+# Combine into one DataFrame
+data = pd.concat([df1, df2, df3], ignore_index=True)
+
+print("Dataset loaded:", data.shape)
 
 # Encode label
 data['sentiment'] = data['sentiment'].map({'positive': 1, 'negative': 0})
