@@ -9,5 +9,10 @@ Therefore, the dataset was split into three smaller CSV files:
 
 The main scripts automatically load and merge these files during execution.
 
+To train and evaluate classical Machine Learning models (Naive Bayes, Logistic Regression, SVM), run:
+python classic_ml.py
+
+To train and evaluate the LSTM-based Deep Learning model, run:
+python lstm_dl.py
 
 
